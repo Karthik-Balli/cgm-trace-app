@@ -1,0 +1,15 @@
+fastapi==0.100.0
+uvicorn[standard]==0.22.0
+motor==3.4.0
+pymongo==4.7.2
+python-dotenv==1.0.0
+pydantic==2.5.0
+pydantic-settings==2.1.0
+pandas==2.2.2
+numpy==1.26.4
+python-multipart==0.0.6
+python-jose==3.3.0
+scikit-learn==1.4.0        # optional, for later ML training/inference
+aiofiles==23.2.1          # for file streaming if needed
+loguru==0.7.0             # friendly logging
+pytest==7.4.2             # tests (optional)

@@ -1,18 +1,86 @@
-# Node.js dependencies
-node_modules/
+# Python Backend (cgm-trace-backend)
+# Virtual Environments
+cgm-trace-backend/.venv/
+cgm-trace-backend/venv/
+cgm-trace-backend/ENV/
+cgm-trace-backend/env/
 
-# Build outputs
-dist/
-build/
-.next/
-.vite/
-out/
+# Python cache
+cgm-trace-backend/__pycache__/
+cgm-trace-backend/**/__pycache__/
+cgm-trace-backend/*.py[cod]
+cgm-trace-backend/*$py.class
+cgm-trace-backend/*.so
+
+# Distribution / packaging
+cgm-trace-backend/.Python
+cgm-trace-backend/build/
+cgm-trace-backend/develop-eggs/
+cgm-trace-backend/dist/
+cgm-trace-backend/downloads/
+cgm-trace-backend/eggs/
+cgm-trace-backend/.eggs/
+cgm-trace-backend/lib/
+cgm-trace-backend/lib64/
+cgm-trace-backend/parts/
+cgm-trace-backend/sdist/
+cgm-trace-backend/var/
+cgm-trace-backend/wheels/
+cgm-trace-backend/pip-wheel-metadata/
+cgm-trace-backend/share/python-wheels/
+cgm-trace-backend/*.egg-info/
+cgm-trace-backend/.installed.cfg
+cgm-trace-backend/*.egg
+cgm-trace-backend/MANIFEST
+
+# Environment and secrets
+cgm-trace-backend/.env
+cgm-trace-backend/.env.local
+cgm-trace-backend/.env.*.local
+
+# Testing
+cgm-trace-backend/.pytest_cache/
+cgm-trace-backend/.coverage
+cgm-trace-backend/htmlcov/
 
 # Logs
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
-pnpm-debug.log*
+cgm-trace-backend/*.log
+
+# IDE and tooling
+cgm-trace-backend/.mypy_cache/
+cgm-trace-backend/.dmypy.json
+cgm-trace-backend/dmypy.json
+cgm-trace-backend/.pyre/
+cgm-trace-backend/local_settings.py
+cgm-trace-backend/instance/
+
+# React Frontend (cgm-trace-frontend)
+cgm-trace-frontend/node_modules/
+cgm-trace-frontend/npm-debug.log*
+cgm-trace-frontend/yarn-debug.log*
+cgm-trace-frontend/yarn-error.log*
+cgm-trace-frontend/pnpm-debug.log*
+cgm-trace-frontend/.env
+cgm-trace-frontend/.env.local
+cgm-trace-frontend/.env.*.local
+cgm-trace-frontend/.pnp
+cgm-trace-frontend/.pnp.js
+cgm-trace-frontend/build/
+cgm-trace-frontend/dist/
+cgm-trace-frontend/.next/
+cgm-trace-frontend/.vite/
+cgm-trace-frontend/out/
+cgm-trace-frontend/.tsbuildinfo
+cgm-trace-frontend/.eslintcache
+cgm-trace-frontend/package-lock.json
+cgm-trace-frontend/pnpm-lock.yaml
+cgm-trace-frontend/yarn.lock
+cgm-trace-frontend/coverage/
+cgm-trace-frontend/.cache/
+cgm-trace-frontend/.turbo/
+
+# Shared/Root Level
+# Logs
 logs/
 *.log
 
@@ -28,20 +96,5 @@ Thumbs.db
 .vscode/
 .idea/
 
-# TypeScript cache
-*.tsbuildinfo
-
-# ESLint and Prettier caches
-.eslintcache
-
-# Optional lock files (keep only one based on your package manager)
-package-lock.json
-pnpm-lock.yaml
-yarn.lock
-
-# Coverage reports
-coverage/
-
 # Local dev storage
 *.local
-.cache/

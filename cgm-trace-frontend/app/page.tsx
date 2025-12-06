@@ -1,65 +1,208 @@
-import Image from "next/image";
+"use client";
+
+import { Row, Col, Card, Button, Space, Statistic } from "antd";
+import {
+  UploadOutlined,
+  BarChartOutlined,
+  BulbOutlined,
+  ArrowRightOutlined,
+  RiseOutlined,
+} from "@ant-design/icons";
+import Link from "next/link";
+
+const features = [
+  {
+    icon: <UploadOutlined style={{ fontSize: "32px", color: "#1890ff" }} />,
+    title: "Upload Data",
+    description: "Import glucose data from your CGM device in seconds",
+    link: "/upload",
+  },
+  {
+    icon: <BarChartOutlined style={{ fontSize: "32px", color: "#52c41a" }} />,
+    title: "View Analytics",
+    description: "Visualize your glucose trends with interactive charts",
+    link: "/dashboard",
+  },
+  {
+    icon: <BulbOutlined style={{ fontSize: "32px", color: "#faad14" }} />,
+    title: "Get Insights",
+    description: "Receive AI-powered recommendations and predictions",
+    link: "/insights",
+  },
+];
 
 export default function Home() {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex min-h-screen w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
-        </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
+    <div style={{ minHeight: "calc(100vh - 64px - 200px)" }}>
+      {/* Hero Section */}
+      <Row justify="center" style={{ marginBottom: "64px", paddingTop: "48px" }}>
+        <Col xs={24} sm={24} md={20} lg={18}>
+          <div style={{ textAlign: "center" }}>
+            <h1 style={{
+              fontSize: "48px",
+              fontWeight: "700",
+              margin: "0 0 16px 0",
+              background: "linear-gradient(135deg, #1890ff 0%, #52c41a 100%)",
+              WebkitBackgroundClip: "text",
+              WebkitTextFillColor: "transparent",
+            }}>
+              CGM Trace
+            </h1>
+            <h2 style={{
+              fontSize: "28px",
+              fontWeight: "600",
+              margin: "0 0 24px 0",
+              color: "rgba(0, 0, 0, 0.85)",
+            }}>
+              Transform Your Glucose Data into Actionable Insights
+            </h2>
+            <p style={{
+              fontSize: "16px",
+              color: "rgba(0, 0, 0, 0.65)",
+              marginBottom: "32px",
+              lineHeight: "1.6",
+            }}>
+              Upload → Analyze → Predict → Take Action
+            </p>
+
+            <Space size="large" wrap style={{ justifyContent: "center", display: "flex" }}>
+              <Link href="/upload">
+                <Button
+                  type="primary"
+                  size="large"
+                  icon={<UploadOutlined />}
+                  style={{ borderRadius: "6px", minWidth: "160px" }}
+                >
+                  Upload Data
+                </Button>
+              </Link>
+              <Link href="/dashboard">
+                <Button
+                  size="large"
+                  icon={<BarChartOutlined />}
+                  style={{ borderRadius: "6px", minWidth: "160px" }}
+                >
+                  View Dashboard
+                </Button>
+              </Link>
+            </Space>
+          </div>
+        </Col>
+      </Row>
+
+      {/* Features Section */}
+      <Row gutter={[24, 24]} style={{ marginBottom: "64px" }}>
+        <Col span={24}>
+          <h2 style={{
+            fontSize: "28px",
+            fontWeight: "600",
+            textAlign: "center",
+            marginBottom: "32px",
+          }}>
+            Features
+          </h2>
+        </Col>
+
+        {features.map((feature, index) => (
+          <Col xs={24} sm={24} md={8} key={index}>
+            <Link href={feature.link} style={{ textDecoration: "none" }}>
+              <Card
+                hoverable
+                style={{
+                  height: "100%",
+                  border: "1px solid #f0f0f0",
+                  transition: "all 0.3s ease",
+                }}
+              >
+                <div style={{ textAlign: "center" }}>
+                  <div style={{ marginBottom: "16px" }}>
+                    {feature.icon}
+                  </div>
+                  <h3 style={{
+                    fontSize: "18px",
+                    fontWeight: "600",
+                    margin: "0 0 12px 0",
+                  }}>
+                    {feature.title}
+                  </h3>
+                  <p style={{
+                    margin: "0 0 16px 0",
+                    color: "rgba(0, 0, 0, 0.65)",
+                    fontSize: "14px",
+                    lineHeight: "1.6",
+                  }}>
+                    {feature.description}
+                  </p>
+                  <Button
+                    type="primary"
+                    ghost
+                    icon={<ArrowRightOutlined />}
+                    size="small"
+                  >
+                    Learn More
+                  </Button>
+                </div>
+              </Card>
+            </Link>
+          </Col>
+        ))}
+      </Row>
+
+      {/* Stats Section */}
+      <Row gutter={[24, 24]} style={{ marginBottom: "64px" }}>
+        <Col span={24}>
+          <h2 style={{
+            fontSize: "28px",
+            fontWeight: "600",
+            textAlign: "center",
+            marginBottom: "32px",
+          }}>
+            Why CGM Trace?
+          </h2>
+        </Col>
+
+        <Col xs={24} sm={12} md={6}>
+          <Card style={{ textAlign: "center" }}>
+            <Statistic
+              title="Data Points"
+              value={10000}
+              suffix="+"
+              prefix={<RiseOutlined />}
             />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
-      </main>
+          </Card>
+        </Col>
+
+        <Col xs={24} sm={12} md={6}>
+          <Card style={{ textAlign: "center" }}>
+            <Statistic
+              title="Accuracy"
+              value={98}
+              suffix="%"
+            />
+          </Card>
+        </Col>
+
+        <Col xs={24} sm={12} md={6}>
+          <Card style={{ textAlign: "center" }}>
+            <Statistic
+              title="Insights Generated"
+              value={1200}
+              suffix="+"
+            />
+          </Card>
+        </Col>
+
+        <Col xs={24} sm={12} md={6}>
+          <Card style={{ textAlign: "center" }}>
+            <Statistic
+              title="User Satisfaction"
+              value={4.9}
+              suffix="/5"
+              prefix={<RiseOutlined />}
+            />
+          </Card>
+        </Col>
+      </Row>
     </div>
   );
 }

@@ -24,7 +24,7 @@ export default function InsightsPage() {
 
   if (!insights) {
     return (
-      <div>
+      <div style={{ minHeight: "calc(100vh - 64px - 200px)"}} className="p-4">
         <h1 className="page-header-title">Insights</h1>
         <Empty
           description="No insights available. Please upload data first."
@@ -47,7 +47,7 @@ export default function InsightsPage() {
       : { level: "alert", color: "#ff4d4f", message: "Needs attention" };
 
   return (
-    <div>
+    <div style={{ minHeight: "calc(100vh - 64px - 200px)"}} className="p-4">
       {/* Page Header */}
       <Row justify="space-between" align="middle" style={{ marginBottom: "32px" }}>
         <Col>

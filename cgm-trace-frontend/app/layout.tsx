@@ -15,7 +15,7 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
-      <body>
+      <body className="no-scrollbar">
         <Layout style={{ minHeight: "100vh" }}>
           <HeaderBar />
           <Layout>
@@ -26,11 +26,11 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                   {children}
                 </Layout>
               </ReactQueryProvider>
-              <Footer />
+              {/*  <Footer /> */}
             </Layout>
-          </Layout>
-        </Layout>
-      </body>
-    </html>
+          </Layout> 
+        </Layout> 
+      </body> 
+    </html> 
   );
-}
+} 

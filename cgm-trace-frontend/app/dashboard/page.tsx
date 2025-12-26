@@ -44,10 +44,10 @@ export default function Dashboard() {
   }
 
   return (
-    <div>
+    <div style={{ minHeight: "calc(100vh - 64px - 200px)"}} className="p-4">
       {/* Page Header */}
       <Row justify="space-between" align="middle" style={{ marginBottom: "32px" }}>
-        <Col>
+        <Col style={{ paddingLeft: "8px" }}>
           <h1 className="page-header-title">Dashboard</h1>
           <p className="page-header-description">
             Monitor your glucose levels and trends

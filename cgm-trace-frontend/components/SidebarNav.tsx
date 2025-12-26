@@ -26,14 +26,14 @@ export default function SidebarNav() {
         label: <Link href="/">Home</Link>,
       },
       {
-        key: "dashboard",
-        icon: <BarChartOutlined />,
-        label: <Link href="/dashboard">Dashboard</Link>,
-      },
-      {
         key: "upload",
         icon: <UploadOutlined />,
         label: <Link href="/upload">Upload Data</Link>,
+      },
+      {
+        key: "dashboard",
+        icon: <BarChartOutlined />,
+        label: <Link href="/dashboard">Dashboard</Link>,
       },
       {
         key: "insights",

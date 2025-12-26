@@ -68,9 +68,9 @@ export default function UploadCard() {
           {uploading ? (
             <Spin size="large" style={{ marginBottom: "16px" }} />
           ) : uploaded ? (
-            <CheckCircleOutlined style={{ fontSize: "48px", color: "#52c41a", marginBottom: "16px" }} />
+            <CheckCircleOutlined style={{ fontSize: "48px", color: "#fff", padding: "24px", borderRadius: "50px", background: "linear-gradient(135deg, #1890ff 0%, #52c41a 100%)" }} />
           ) : (
-            <UploadOutlined style={{ fontSize: "48px", color: "#1890ff", marginBottom: "16px" }} />
+            <UploadOutlined style={{ fontSize: "48px", color: "#fff", padding: "24px", borderRadius: "50px", background: "linear-gradient(135deg, #1890ff 0%, #52c41a 100%)" }} />
           )}
           <p style={{
             fontSize: "16px",

@@ -33,9 +33,9 @@ const features = [
 
 export default function Home() {
   return (
-    <div style={{ minHeight: "calc(100vh - 64px - 200px)" }}>
+    <div style={{ minHeight: "calc(100vh - 64px - 200px)"}} className="p-4">
       {/* Hero Section */}
-      <Row justify="center" style={{ marginBottom: "64px", paddingTop: "48px" }}>
+      <Row justify="center" style={{ marginBottom: "48px", paddingTop: "32px" }}>
         <Col xs={24} sm={24} md={20} lg={18}>
           <div style={{ textAlign: "center" }}>
             <h1 style={{
@@ -71,7 +71,7 @@ export default function Home() {
                   type="primary"
                   size="large"
                   icon={<UploadOutlined />}
-                  style={{ borderRadius: "6px", minWidth: "160px" }}
+                  style={{ borderRadius: "8px", minWidth: "200px" }}
                 >
                   Upload Data
                 </Button>
@@ -97,7 +97,6 @@ export default function Home() {
             fontSize: "28px",
             fontWeight: "600",
             textAlign: "center",
-            marginBottom: "32px",
           }}>
             Features
           </h2>
@@ -112,6 +111,7 @@ export default function Home() {
                   height: "100%",
                   border: "1px solid #f0f0f0",
                   transition: "all 0.3s ease",
+                  borderRadius: "8px",
                 }}
               >
                 <div style={{ textAlign: "center" }}>
@@ -130,14 +130,16 @@ export default function Home() {
                     color: "rgba(0, 0, 0, 0.65)",
                     fontSize: "14px",
                     lineHeight: "1.6",
+                    minHeight: "48px"
                   }}>
                     {feature.description}
                   </p>
                   <Button
                     type="primary"
-                    ghost
+                    block
+                    size="large"
                     icon={<ArrowRightOutlined />}
-                    size="small"
+                    style={{ borderRadius: "6px", width: "60%" }}
                   >
                     Learn More
                   </Button>

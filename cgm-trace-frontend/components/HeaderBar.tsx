@@ -58,7 +58,7 @@ export default function HeaderBar() {
   return (
     <Header
       style={{
-        background: "#aeaeae",
+        background: "#ADD8E6",
         display: "flex",
         alignItems: "center",
         justifyContent: "space-between",

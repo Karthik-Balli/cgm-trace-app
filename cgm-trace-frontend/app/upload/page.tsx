@@ -6,9 +6,9 @@ import UploadCard from "@/components/UploadCard";
 
 export default function UploadPage() {
   return (
-    <div>
+    <div style={{ minHeight: "calc(100vh - 64px - 200px)"}} className="p-4">
       {/* Page Header */}
-      <Row style={{ marginBottom: "32px" }}>
+      <Row style={{ marginBottom: "16px", paddingLeft: "8px" }} >
         <Col span={24}>
           <h1 className="page-header-title">Upload Glucose Data</h1>
           <p className="page-header-description">
@@ -54,15 +54,15 @@ export default function UploadPage() {
         {/* Sidebar */}
         <Col xs={24} md={10}>
           {/* Supported Formats */}
-          <Card title="Supported Formats" style={{ marginBottom: "24px" }}>
-            <Space orientation="vertical" style={{ width: "100%" }}>
+          <Card title="Supported Formats" style={{ marginBottom: "16px" }}>
+            <Space orientation="vertical" style={{ width: "100%", }}>
               <div>
                 <strong>File Types:</strong>
-                <p style={{ margin: "8px 0", color: "rgba(0, 0, 0, 0.65)" }}>
+                <p style={{ margin: "4px 0", color: "rgba(0, 0, 0, 0.65)" }}>
                   • CSV (Comma-Separated Values)
                 </p>
               </div>
-              <Divider style={{ margin: "12px 0" }} />
+              <Divider style={{ margin: "8px 0" }} />
               <div>
                 <strong>Required Columns:</strong>
                 <p style={{ margin: "8px 0", color: "rgba(0, 0, 0, 0.65)" }}>
